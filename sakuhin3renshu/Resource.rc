@@ -1,0 +1,11 @@
+#include "resource.h"
+
+IDI_ICON1 ICON "doragon.ico"
+
+IDC_CURSOR1 CURSOR  "CrossLight-HD01-Aim_Red.cur"
+IDC_CURSOR2 CURSOR  "CrossLight-HD01-Aim_Green.cur"
+IDC_CURSOR3 CURSOR  "CrossLight-HD01-Aim_Black.cur"
+
+
+
+
