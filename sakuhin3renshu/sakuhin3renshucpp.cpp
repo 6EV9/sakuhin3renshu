@@ -331,19 +331,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	if (MY_FONT_CREATE() == FALSE) { return -1; }
 
-
-
-
-	//HCURSOR cur_aim1 = LoadCursorFromFile(TEXT(IDC_CURSOR1));
-	//HCURSOR cur_aim2 = LoadCursorFromFile(TEXT(IDC_CURSOR2));
-	//HCURSOR cur_aim3 = LoadCursorFromFile(TEXT(IDC_CURSOR3));
-
-
-	/*LONG OldWindowClass
-		= SetClassLong(GetMainWindowHandle(), GCL_HCURSOR, (LONG)cur_aim1);*/
-
-
-
 	SetMouseDispFlag(TRUE);
 
 	int DrawX = 0;
@@ -415,12 +402,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 		MY_FPS_WAIT();
 	}
-
-
-	/*
-
-	SetClassLong(GetMainWindowHandle(), GCL_HCURSOR, OldWindowClass);
-	*/
 
 
 	MY_FONT_DELETE();
@@ -897,19 +878,6 @@ VOID MY_PLAY_PROC(VOID)
 
 	}
 
-	/*player.CenterX = mouse.Point.x;
-	player.CenterY = mouse.Point.y;
-
-
-	player.image.x = player.CenterX - player.image.width / 2;
-	player.image.y = player.CenterY - player.image.height / 2;
-
-
-	if (player.image.x < 0) { player.image.x = 0; }
-	if (player.image.x + player.image.width > GAME_WIDTH) { player.image.x = GAME_WIDTH - player.image.width; }
-	if (player.image.y < 0) { player.image.y = 0; }
-	if (player.image.y + player.image.height > GAME_HEIGHT) { player.image.y = GAME_HEIGHT - player.image.height; }*/
-
 	if (MY_MOUSE_DOWN(MOUSE_INPUT_LEFT) == TRUE)
 	{
 
@@ -957,13 +925,6 @@ VOID MY_PLAY_PROC(VOID)
 
 VOID MY_PLAY_DRAW(VOID)
 {
-
-	/*
-	//
-	DrawBox(10, 10, GAME_WIDTH - 10, GAME_HEIGHT - 10, GetColor(0, 255, 0), TRUE);
-	*/
-
-
 
 	DrawGraph(ImageBack.x, ImageBack.y, ImageBack.handle, TRUE);
 
@@ -1044,16 +1005,6 @@ VOID MY_PLAY_DRAW(VOID)
 		}
 	}
 	DrawBox(player.coll.left, player.coll.top, player.coll.right, player.coll.bottom, GetColor(255, 0, 0), FALSE);
-
-
-	/*DrawRotaGraph(
-		player.image.x, player.image.y,
-		2.0,
-		DX_PI * 2 / 4 * 2,
-		player.image.handle, TRUE);*/
-
-
-
 
 	DrawGraph(player.image.x, player.image.y, player.image.handle, TRUE);
 
